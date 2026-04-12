@@ -1,0 +1,107 @@
+.App {
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Configuração do corpo da página */
+body {
+  background-color: #12121b; /* Um tom mais escuro que o header para dar profundidade */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #eeeeee;
+  min-height: 100vh;
+}
+
+/* Container principal */
+main {
+  padding: 120px 20px 40px; /* Padding superior para compensar o header fixo */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Grid de cartões */
+main ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  list-style: none;
+}
+
+/* Estilo do Card */
+.card {
+  background-color: #1e1e2f; /* Mesma cor do header */
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #2d2d44;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  border-color: #4CAF50; /* Borda verde suave no hover */
+}
+
+/* Título do Card */
+.card h1 {
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 15px;
+  border-left: 4px solid #4CAF50; /* Detalhe em verde */
+  padding-left: 10px;
+}
+
+/* Descrição */
+.card p {
+  font-size: 15px;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* Botão/Link */
+.App-link {
+  text-decoration: none;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background 0.3s ease;
+  display: inline-block;
+}
+
+.App-link:hover {
+  background-color: #45a049;
+  filter: brightness(1.1);
+}
