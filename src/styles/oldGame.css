@@ -1,0 +1,97 @@
+.jogo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.jogo-container h1 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.tabuleiro {
+  background-color: #34495e;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  margin: 20px 0;
+}
+
+.linha {
+  display: flex;
+}
+
+.quadrado {
+  width: 100px;
+  height: 100px;
+  background-color: #ffffff;  /* ← BRANCO */
+  border: 2px solid #2c3e50;
+  font-size: 48px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #2c3e50;
+}
+
+.quadrado:hover {
+  background-color: #f0f0f0;  /* ← CINZA CLARO no hover */
+  transform: scale(1.02);
+}
+
+.status {
+  font-size: 24px;
+  margin: 20px 0;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.status strong {
+  font-size: 28px;
+  background: #ffd700;
+  color: #2c3e50;
+  padding: 2px 12px;
+  border-radius: 20px;
+  margin-left: 8px;
+}
+
+.botao-reiniciar {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.botao-reiniciar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 600px) {
+  .quadrado {
+    width: 80px;
+    height: 80px;
+    font-size: 36px;
+  }
+
+  .status {
+    font-size: 18px;
+  }
+
+  .status strong {
+    font-size: 22px;
+  }
+}
